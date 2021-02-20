@@ -1,94 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Todo from "./Todo";
 
-const Todos = () => {
-  const todos = [
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Itu Sangat menyenangkan"
-    },
-    {
-      text: "Mari Belajar Untuk"
-    },
-    {
-      text: "Mengasah Skills"
-    },
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Itu Sangat menyenangkan"
-    },
-    {
-      text: "Mari Belajar Untuk"
-    },
-    {
-      text: "Mengasah Skills"
-    },
-    {
-      text: "Mari Belajar Untuk"
-    },
-    {
-      text: "Mengasah Skills"
-    },
-    {
-      text: "Mari Belajar Untuk"
-    },
-    {
-      text: "Mengasah Skills"
-    },
-    {
-      text: "Mari Belajar Untuk"
-    },
-    {
-      text: "Mengasah Skills"
-    },
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Itu Sangat menyenangkan"
-    },
-    {
-      text: "Mari Belajar Untuk"
-    },
-    {
-      text: "Mengasah Skills"
-    },
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Itu Sangat menyenangkan"
-    },
-    {
-      text: "Mari Belajar Untuk"
-    },
-    {
-      text: "Mengasah Skills"
-    },
-    {
-      text: "Mari Belajar Untuk"
-    },
-    {
-      text: "Mengasah Skills"
-    },
-    {
-      text: "Mari Belajar Untuk"
-    },
-    {
-      text: "Mengasah Skills"
-    },
-    {
-      text: "Mari Belajar Untuk"
-    },
-    {
-      text: "Mengasah Skills"
-    }
-  ];
-
+const Todos = ({ todos }) => {
   return (
     <section className="todos">
       {todos.map((todo) => {
@@ -96,6 +10,14 @@ const Todos = () => {
       })}
     </section>
   );
+};
+
+Todos.PropTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string
+    })
+  )
 };
 
 export default Todos;
