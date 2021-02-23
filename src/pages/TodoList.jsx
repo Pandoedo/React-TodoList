@@ -11,13 +11,20 @@ const TodoList = () => {
     { text: "itu sangat happy" },
     { text: "mari belajar sekarang" }
   ]);
-  return [
+
+  const addTodo = (value) => {
+    const addedTodo = [...todos, { text: value }];
+
+    setTodos(addedTodo);
+  };
+
+  return (
     <Paper>
       <Header />
-      <TodoForm />
+      <TodoForm addTodo={addTodo} />
       <Todos todos={todos} />
     </Paper>
-  ];
+  );
 };
 
 export default TodoList;
