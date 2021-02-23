@@ -12,7 +12,7 @@ const TodoForm = ({ addTodo, showAdd }) => {
       return;
     }
 
-    if (value.length > 20) {
+    if (value.length > 40) {
       alert("Please, creater a shorter todo text! ");
       setValue("");
       return;
